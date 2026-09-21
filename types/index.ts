@@ -36,3 +36,6 @@ export interface Settings {
   instagram_url?: string;
   address?: string;
 }
+
+// Добавленный экспорт-псевдоним для совместимости с кодом
+export type StoreSettings = Settings;
