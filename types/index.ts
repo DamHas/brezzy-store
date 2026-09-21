@@ -1,0 +1,38 @@
+export interface Category {
+  id: string;
+  name: string;
+  slug?: string;
+}
+
+export interface Product {
+  id: string;
+  name: string;
+  description?: string;
+  price: number;
+  old_price?: number;
+  category_id?: string;
+  categories?: { name: string };
+  images?: string[];
+  sizes?: string[];
+  size_prices?: Record<string, number>;
+  size_stocks?: Record<string, number>;
+  stock_quantity?: number;
+  is_in_stock?: boolean;
+  created_at?: string;
+}
+
+export interface CartItem {
+  id: string;
+  name: string;
+  price: number;
+  image: string;
+  size: string;
+  quantity: number;
+}
+
+export interface Settings {
+  store_name?: string;
+  whatsapp_number?: string;
+  instagram_url?: string;
+  address?: string;
+}
